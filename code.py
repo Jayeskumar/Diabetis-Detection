@@ -30,3 +30,11 @@ if pred == 0:
 X_test = scaler.transform(X_test)
 y_pred = clf.predict(X_test)
 print(accuracy_score(y_test, y_pred))
+patient = np.array([[ 1., 200., 75., 40., 0., 45.,1.5, 20. ],])
+patient = scaler.transform(patient)
+pred = clf.predict(patient)
+
+if pred == 1:
+    print("Patient has diabetes")
+if pred == 0:
+    print("Patient does not have diabetes")
